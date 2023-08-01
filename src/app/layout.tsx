@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { cookies } from "next/headers";
+//import { cookies } from "next/headers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +15,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const cookiesList = cookies();
-  console.log(cookiesList.get("val")?.value || "unknown");
+  //const cookiesList = cookies();
+  //console.log(cookiesList.get("val")?.value || "unknown");
   console.log(process.env.ADMIN_TEST);
   if (!process.env.ADMIN_TEST) {
     throw Error("CANNOT PROCEED");
